@@ -1,10 +1,8 @@
-import pandas as pd
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-import time
 
 
 def preprocess(seqs_1, seqs_2, pad_length_1=None, pad_length_2=None):

@@ -1,10 +1,7 @@
-import pandas as pd
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-import os
-
 
 
 def preprocess(seqs_1, seqs_2, pad_length_1=None, pad_length_2=None):
@@ -22,9 +19,6 @@ def preprocess(seqs_1, seqs_2, pad_length_1=None, pad_length_2=None):
     preprocessed_2 = pad_sequences(preprocessed_2, maxlen=pad_length_2, padding='post')
 
     return preprocessed_1, preprocessed_2, tokenizer_1, tokenizer_2
-
-
-
 
 
 def set_positional_encoding(max_seq_len, wordvec_size):

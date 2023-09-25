@@ -5,15 +5,12 @@ import pandas as pd
 import os
 import time
 
+# please check your GPU device number
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-config = tf.compat.v1.ConfigProto()
-config.gpu_options.allow_growth = True
 
 use_FNet = False
 
-os.listdir('E:/OTHER/eng_-french.csv')
-
-df = pd.read_csv("E:/OTHER/eng_-french.csv/eng_-french.csv")
+df = pd.read_csv("datasets/eng_-french.csv")
 df = df.iloc[:5000]
 
 en = df['English words/sentences']
