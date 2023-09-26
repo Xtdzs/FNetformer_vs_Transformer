@@ -71,16 +71,7 @@ class FourierSublayer(layers.Layer):
         F_seq = tf.signal.fft(tf.cast(x, tf.complex64))
         F_seq_real = tf.cast(tf.math.real(F_seq), tf.float32)
 
-        x_transposed = tf.transpose(x, perm=[0, 2, 1])
-
-        F_h = tf.signal.fft(tf.cast(x_transposed, tf.complex64))
-        F_h = tf.transpose(F_h, perm=[0, 2, 1])
-
-        F_h_real = tf.cast(tf.math.real(F_h), tf.float32)
-
-        output_real = F_h_real + F_seq_real
-
-        return output_real
+        return F_seq_real
 
 
 class InitEncoderLayer(tf.keras.layers.Layer):
