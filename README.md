@@ -2,7 +2,7 @@
 
 ## Main Work
 
-Based on the paper ***[FNet: Mixing Tokens with Fourier Transforms](https://arxiv.org/abs/2105.03824)***, I reproduced FNet&Transformer architecture and made an experiment on them.
+Based on the paper ***[FNet: Mixing Tokens with Fourier Transforms](https://arxiv.org/abs/2105.03824)***, I reproduced FNet&Transformer architecture and made an experiment on them. (I reproduced the Transformer Architecture on a very badic level by tensorflow)
 
 ## Environment
 
